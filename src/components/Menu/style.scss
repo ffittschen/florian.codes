@@ -2,14 +2,17 @@
 @import "../../assets/scss/mixins";
 
 .menu {
-    @include margin-bottom(1);
+    text-align: center;
     &__list {
         list-style: none;
         padding: 0;
         margin: 0;
         &-item {
-            padding: 0;
-            margin: 10px 0;
+            display: inline-block;
+            padding: 0 5px;
+            &:first-child {
+                padding-left: 0px;
+            }
             &-link {
                 font-size: $typographic-base-font-size;
                 color: $typographic-base-font-color;
@@ -24,6 +27,20 @@
                     color: $color-base;
                     border-bottom: 1px solid $color-base;
                 }
+            }
+        }
+    }
+}
+
+@include breakpoint-sm {
+    .menu {
+        @include margin-bottom(1);
+        text-align: inherit;
+        &__list {
+            &-item {
+                display: list-item;
+                padding: 0;
+                margin: 10px 0;
             }
         }
     }

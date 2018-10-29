@@ -8,6 +8,7 @@
         padding: 25px 20px 0;
     }
     &__author {
+        text-align: center;
         &-logo {
             display: inline-block;
             margin-bottom: 0;
@@ -36,12 +37,16 @@
     &__copyright {
         color: lighten($color-gray, 18%);
         font-size: $typographic-small-font-size;
+        display: none;
     }
 }
 
 @include breakpoint-sm {
     .sidebar {
         lost-column: 5/12;
+        &__author {
+            text-align: inherit;
+        }
         &__inner {
             padding: 30px 20px 0;
             &:after {
@@ -55,6 +60,9 @@
                 right: -10px;
                 bottom: 0;
             }
+        }
+        &__copyright {
+            display: block;
         }
     }
 }
