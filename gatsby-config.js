@@ -106,6 +106,7 @@ module.exports = {
             options: {
               maxWidth: 960,
               quality: 85,
+              WebP: true,
             },
           },
           {
