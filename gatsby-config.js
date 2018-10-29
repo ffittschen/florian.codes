@@ -9,7 +9,7 @@ module.exports = {
     copyright: `© ${(new Date()).getFullYear()} All rights reserved.`,
     menu: [
       {
-        label: 'Blog',
+        label: 'Articles',
         path: '/',
       },
       {
