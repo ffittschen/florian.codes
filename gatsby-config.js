@@ -121,9 +121,11 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-fonts',
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: ['roboto:400,400i,500,700'],
+        google: {
+          families: ['Roboto:400,400i,500,700'],
+        },
       },
     },
     {
