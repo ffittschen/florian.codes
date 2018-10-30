@@ -10,6 +10,10 @@ class PostTemplateDetails extends React.Component {
     const homeLink = post.frontmatter.category === 'Project' ? '/categories/project/' : '/'
     const homeTitle = post.frontmatter.category === 'Project' ? 'All Projects' : 'All Articles'
     const postURL = this.props.data.site.siteMetadata.url + this.props.location.pathname
+    let publishedAndUpdatedDate = `Published ${moment(post.frontmatter.date).format('DD MMM YYYY')}`
+    if (post.frontmatter.updated !== undefined) {
+      publishedAndUpdatedDate += ` – Last Updated ${moment(post.frontmatter.updated).format('DD MMM YYYY')}.`
+    }
 
     const homeBlock = (
       <div>
@@ -47,7 +51,7 @@ class PostTemplateDetails extends React.Component {
             />
             <div className="post-single__date">
               <em>
-                Published {moment(post.frontmatter.date).format('D MMM YYYY')}
+                {publishedAndUpdatedDate}
               </em>
             </div>
           </div>

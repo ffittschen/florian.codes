@@ -18,7 +18,7 @@ class Post extends React.Component {
         <div className="post__meta">
           <time
             className="post__meta-time"
-            dateTime={moment(date).format('MMMM D, YYYY')}
+            dateTime={moment(date).format('YYYY-MM-DD')}
           >
             {moment(date).format('MMMM YYYY')}
           </time>
